@@ -48,7 +48,7 @@ public class Login extends HttpServlet {
 		RequestDispatcher dispatcher = null;
 		try {
 			Class.forName("com.mysql.cj.jdbc.Driver");
-			Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/login_schema?useSSL=false", "root", "rootroot");
+			Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/login_schema?useSSL=false", "****", "********");
 			PreparedStatement pst = con.prepareStatement("select * from login_users where user_email= ? and password= ? ");
 			pst.setString(1, uEmail);
 			pst.setString(2, uPwd);
